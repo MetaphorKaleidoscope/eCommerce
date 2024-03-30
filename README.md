@@ -2,6 +2,8 @@
 # An eCommerce Website
 ##A website to feed your mind: eatBooks
 <img alt="Python" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" height="30px"/>
+<img alt="html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" height="30px"/>
+<img alt="Css3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" height="30px"/>
 <img alt="Bootstrap" src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" height="30px"/>
 <img alt="Flask" src="https://img.shields.io/badge/-Flask-00599C?style=for-the-badge&logo=Flask&logoColor=white" height="30px"/>
 <img alt="Jinja" src="https://img.shields.io/badge/-Jinja-d00?style=for-the-badge&logo=Jinja&logoColor=white" height="30px"/>
