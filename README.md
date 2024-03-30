@@ -1,6 +1,7 @@
 
 # An eCommerce Website
-##A website to feed your mind: eatBooks
+## A website to feed your mind: eatBooks
+<p>
 <img alt="Python" src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" height="30px"/>
 <img alt="html5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" height="30px"/>
 <img alt="Css3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" height="30px"/>
@@ -10,8 +11,9 @@
 <img alt="SQLite" src="https://img.shields.io/badge/-SQLite-044a64?style=for-the-badge&logo=SQLite&logoColor=white" height="30px"/>
 <img alt="SQLAlchemy" src="https://img.shields.io/badge/-SQLAlchemy-F00?style=for-the-badge&logo=SQLAlchemy&logoColor=white" height="30px"/>
 <img alt="Pandas" src="https://img.shields.io/badge/-Pandas-212529?style=for-the-badge&logo=Pandas&logoColor=white" height="30px"/>
+</p>
 
-##bookstore eCommerce website, Pick your favorite book!
+## bookstore eCommerce website, Pick your favorite book!
 
 ## Features
 
