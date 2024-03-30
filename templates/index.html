@@ -1,0 +1,61 @@
+{% include "header.html" %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background: #241468">
+    <div class="overlay"></div>
+          <div class="site-heading">
+          </div>
+  </header>
+
+  <!-- Main Content -->
+
+     {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+         <div class="message_style">
+                <p>{{ message }}</p>
+          </div>
+            {% endfor %}
+        {% else %}
+        <div class="welcome-title">
+            <h1>Discover what it wants to eat your mind!</h1>
+        </div>
+        {% endif %}
+     {% endwith %}
+
+
+  <div class="container">
+          {% set move = namespace(value=0) %}
+      {% for _ in range(4) %}
+             <div class="row horizontal-align: center">
+                {% for index in (index_book[0+move.value:3+move.value]): %}
+                    <div class="col-sm-4">
+                        <div class="book-contain">
+                            <a href="{{ url_for('book_details', book_id=index) }}">
+                            <p class="book_img">
+                                <img src=" {{all_books.image_url[index-1]}} " alt="" style="center;">
+                            </p>
+                            </a>
+                            <div class="">
+                                <a href="{{ url_for('book_details', book_id=index) }}">
+                                <h6 class="book-name">
+                                    {{all_books.original_title[index-1]}}
+                                </h6>
+                                </a>
+                                <a href="{{ url_for('book_details', book_id=index) }}">
+                                <p class="book-preview">
+                                    ${{all_books.price[index-1]}}
+                                </p></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+             </div>
+            {% set move.value = move.value + 3 %}
+      {% endfor %}
+<!--      </div>-->
+  </div>
+<hr>
+
+
+{% include "footer.html" %}

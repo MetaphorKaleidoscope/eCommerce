@@ -1,0 +1,62 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background: #241468">
+    <div class="overlay"></div>
+          <div class="site-heading">
+          </div>
+  </header>
+
+  <!-- Main Content -->
+<div class="book-title">
+    <h4>{{all_books.original_title[index_book-1]}}</h4>
+</div>
+  <div class="container">
+             <div class="row">
+                    <div class="col-sm-4">
+                        <div class="book-contain">
+                            <p class="book_img_details">
+                                <img src=" {{all_books.image_url[index_book-1]}} " alt="" style="width: 200px;height:300px;padding: 15px">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                                <h4 class="book-name">
+                                    {{all_books.original_title[index_book-1]}}
+                                </h4>
+                                <p class="book-details">
+                                    {{all_books.authors[index_book-1]}}
+                                </p>
+                                <p class="book-details">
+                                    year: {{all_books.original_publication_year[index_book-1]}}
+                                </p>
+                                 <p class="book-details">
+                                    language: {{all_books.language_code[index_book-1]}}
+                                 </p>
+                                 <p class="book-details">
+                                    rating: {{all_books.average_rating[index_book-1]}}
+                                 </p>
+                    </div>
+                    <div class="col-sm-4">
+                                 <h4 class="book-details">
+                                    ${{all_books.price[index_book-1]}}
+                                 </h4>
+                                <p class="book-details">
+                                    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"})}}
+                                </p>
+                                 <p class="book-free-shipping">
+                                    Free shipping always
+                                 </p>
+                                 <p class="book-note">
+                                    *The price is exclusive for online purchases.
+                                 </p>
+                    </div>
+
+             </div>
+
+  </div>
+<hr>
+
+
+{% include "footer.html" %}

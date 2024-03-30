@@ -1,0 +1,65 @@
+{% include "header.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background: #241468">
+    <div class="overlay"></div>
+          <div class="site-heading">
+          </div>
+  </header>
+
+  <!-- Main Content -->
+{% if items > 0 %}
+  <div class="container">
+      {% for book in all_books: %}
+             <div class="row">
+                    <div class="col-sm-4">
+                        <div class="book-contain">
+                            <p class="book_img_details">
+                                <img src=" {{book.image_url}} " alt="" style="width: 100px;height:150 px;padding: 15px">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                                <h4 class="book-details">
+                                    {{book.title_book}}
+                                </h4>
+                                <p class="book-details">
+                                    <a href="{{url_for('minus_book', book_id=book.id) }}">➖</a>  {{ book.number }}  <a href="{{url_for('plus_book', book_id=book.id) }}">➕</a>
+                                </p>
+                                 <h4 class="book-details">
+                                    ${{book.price}}
+                                 </h4>
+                                 <p class="book-delete">
+                                    <a href="{{url_for('delete_book', book_id=book.id) }}">✘</a>
+                                 </p>
+                    </div>
+                    <div class="col-sm-4">
+                                 <h4 class="book-details">
+                                    subtotal: ${{ "%.2f"|format(book.subtotal|float) }}
+                                 </h4>
+                    </div>
+
+             </div>
+      {% endfor %}
+<!--      <div class="row">-->
+          <div class="col">
+      <h4 class="checkout-preview">
+          subtotal: ${{ "%.2f"|format(bag_user.total|float) }}
+      </h4>
+      <h4 class="checkout-preview">
+          Free shipping: ${{ 0.0 }}
+      </h4>
+          <h4 class="checkout-preview" style="right">
+          {{ wtf.quick_form(form_submit, novalidate=True, button_map={"submit": "primary"})}}
+          </h4>
+              </div>
+  </div>
+<hr>
+{% else: %}
+<div class="empty-bag">
+    <h1>Your shopping bag is empty!</h1>
+</div>
+{% endif %}
+
+{% include "footer.html" %}
